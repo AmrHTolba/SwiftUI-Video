@@ -55,9 +55,9 @@
 			children = (
 				E5C8E9662C838CB5007DBED1 /* SwiftUI_VideosApp.swift */,
 				E5C8E9682C838CB5007DBED1 /* ContentView.swift */,
+				E5C8E9742C839363007DBED1 /* Video.swift */,
 				E5C8E96A2C838CB6007DBED1 /* Assets.xcassets */,
 				E5C8E96C2C838CB6007DBED1 /* Preview Content */,
-				E5C8E9742C839363007DBED1 /* Video.swift */,
 			);
 			path = "SwiftUI-Videos";
 			sourceTree = "<group>";

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-    var videos: [Video] = []
+    var videos: [Video] = VideoList.topTwelve
     
     var body: some View {
         NavigationView {
