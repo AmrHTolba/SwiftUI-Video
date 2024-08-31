@@ -8,17 +8,39 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    var videos: [Video] = []
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationView {
+            List(videos) { video in
+                HStack {
+                    Image(video.imageName)
+                        .resizable()
+                        .frame(width: 140,height: 90.0)
+                        .scaledToFit()
+                        .cornerRadius(9)
+                    
+                    
+                    Spacer().frame(width: 10)
+                    
+                    VStack(alignment: .leading) {
+                        Text(video.title)
+                            .fontWeight(.semibold)
+                            .lineLimit(2)
+                            .minimumScaleFactor(0.75)
+                        Spacer().frame(height: 5)
+                        Text(video.uploadDate)
+                            .font(.subheadline)
+                            .foregroundStyle(.secondary)
+                        
+                    }
+                }
+            }.navigationTitle("Sean's Videos")
         }
-        .padding()
     }
 }
 
 #Preview {
-    ContentView()
+    ContentView(videos: VideoList.topTwelve)
 }
